@@ -59,12 +59,12 @@ pipeline {
       } 
     stage('Build Image'){
         steps{
-            bat "docker build -t assignmentimage:${BUILD_NUMBER} ."
+            bat "docker build -t assignment04image:${BUILD_NUMBER} ."
         }
     }
     stage('Docker Deployment'){
         steps{
-            bat "docker run --name assignmentcontainer -d -p 9050:8084 assignmentimage:${BUILD_NUMBER}"
+            bat "docker run --name assignment04container -d -p 9050:8084 assignment04image:${BUILD_NUMBER}"
         }
     }
     }
