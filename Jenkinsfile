@@ -64,7 +64,7 @@ pipeline {
     }
     stage('Docker Deployment'){
         steps{
-            bat "docker run --name assignment04container -d -p 9065:8084 assignment04image:${BUILD_NUMBER}"
+            bat "docker run --name assignment04container -d -p 9065:8080 assignment04image:${BUILD_NUMBER}"
         }
     }
     }
