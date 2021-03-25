@@ -59,7 +59,7 @@ pipeline {
       } 
     stage('Build Image'){
         steps{
-            bat "docker build -t assignmentimage:${BUILD_NUMBER}."
+            bat "docker build -t assignmentimage:${BUILD_NUMBER} ."
         }
     }
     stage('Docker Deployment'){
